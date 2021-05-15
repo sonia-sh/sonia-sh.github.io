@@ -6,60 +6,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonia Huang Portfolio</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li id="nav-home">Portfolio</li>
-                <li id="nav-about">About Me</li>
-                <li id="nav-resume">Resume</li>
-            </ul>
+        <nav class="nav">
+            <a class="nav-link" href="#portfolio-grid">Portfolio</a>
+            <a class="nav-link" href="./docs/about.html">About Me</a>
+            <a class="nav-link" href="#footer">Contact</a>
         </nav>
     </header>
 
     <main>
-        <h1>Development in progress...</h1>
+        <div class="landing-page container" id="landing-page">
+            <h1>Hi, I'm Sonia! I am a <span id="highlight-designer">designer</span> & <span id="highlight-developer">developer</span>.</h1>
+            <p>Check out my portfolio below!</p>
+            <img src="" alt="" />
+        </div>
     
-        <div class="landing-page" id="landing-page"></div>
-    
-        <div id="portfolio-grid">
-            <div class="card" id="project-imgfeed">
-                <h3 class="card-header">IMGFeed</h3>
-                <img class="img-top" />
-                <p class="card-body">Using HTML, CSS, and vanilla JS to build a social media single-page web app. </p>
-                <p class="card-footer">Web Development</p>
+        <div id="portfolio-grid container">
+            <div class="row g-3 container">
+                <div class="col">
+                    <div class="card" id="project-imgfeed">
+                        <h3 class="card-header">IMGFeed</h3>
+                        <img class="img-top" alt="" />
+                        <p class="card-body">Using HTML, CSS, and vanilla JS to build a social media single-page web app. </p>
+                        <p class="card-footer">Web Development</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" id="project-orbit">
+                        <h3 class="card-header">Orbit</h3>
+                        <img class="img-top" alt="" />
+                        <p class="card-body">Designing a subject selection guide mobile app for high school students on Figma.</p>
+                        <p class="card-footer">UI/UX</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" id="project-pantrypal">
+                        <h3 class="card-header">PantryPal</h3>
+                        <img class="img-top" alt="" />
+                        <p class="card-body">Designing an app for managing kitchen inventory.</p>
+                        <p class="card-footer">UI/UX</p>
+                    </div>
+                </div>
             </div>
-            <div class="card" id="project-orbit">
-                <h3 class="card-header">Orbit</h3>
-                <img class="img-top" />
-                <p class="card-body">Designing a subject selection guide mobile app for high school students on Figma.</p>
-                <p class="card-footer">UI/UX</p>
-            </div>
-            <div class="card" id="project-pantrypal">
-                <h3 class="card-header">PantryPal</h3>
-                <img class="img-top" />
-                <p class="card-body">Designing an app for managing kitchen inventory.</p>
-                <p class="card-footer">UI/UX</p>
-            </div>
-            <div class="card" id="project-desktop">
-                <h3 class="card-header">Desktop Buddies</h3>
-                <img class="img-top" />
-                <p class="card-body">3D modelled workspace related objects that can be used as design assets.</p>
-                <p class="card-footer">3D Modelling</p>
-
-            </div>
-            <div class="card" id="project-bloom">
-                <h3 class="card-header">Bloom</h3>
-                <img class="img-top" />
-                <p class="card-body">Short video made in Nuke Studio for Visual Effects course.</p>
-                <p class="card-footer">Visual Effects</p>
+            <div class="row g-3 container">
+                <div class="col">
+                    <div class="card" id="project-desktop">
+                        <h3 class="card-header">Desktop Buddies</h3>
+                        <img class="img-top" alt="" />
+                        <p class="card-body">3D modelled workspace related objects that can be used as design assets.</p>
+                        <p class="card-footer">3D Modelling</p>
+                    </div>  
+                </div>
+                <div class="col">
+                    <div class="card" id="project-bloom">
+                        <h3 class="card-header">Bloom</h3>
+                        <img class="img-top" alt="" />
+                        <p class="card-body">Short video made in Nuke Studio for Visual Effects course.</p>
+                        <p class="card-footer">Visual Effects</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" id="project-imgfeed">
+                        <h3 class="card-header">BigBrain</h3>
+                        <img class="img-top" alt="" />
+                        <p class="card-body">Using HTML, CSS, and ReactJS to build a Kahootz clone.</p>
+                        <p class="card-footer">Web Development</p>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer></footer>
+    <footer id="footer">
+        <h2>Contact Me!</h2>
+        <!-- email -->
+        <!-- linkedin -->
+        <!-- theloop -->
+    </footer>
 </body>
 </html>
