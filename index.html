@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonia Huang Portfolio</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 <body>
     <header>
         <nav class="nav">
-            <a class="nav-link" href="#portfolio-grid">Portfolio</a>
-            <a class="nav-link" href="./docs/about.html">About Me</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#portfolio-grid" title="Portfolio Home Page">Portfolio</a>
+            <a class="nav-link" href="./docs/about.html" title="About Page">About Me</a>
+            <a class="nav-link" href="#contact" title="Contact Details">Contact</a>
         </nav>
     </header>
 
@@ -29,7 +30,7 @@
             <h1>Projects</h1><br />
             <div class="row g-3">
                 <div class="col">
-                    <div class="card" id="project-imgfeed">
+                    <div class="card" id="project-imgfeed" onclick="imgfeed()">
                         <h3 class="card-header">IMGFeed</h3>
                         <img class="img-top" alt="" />
                         <p class="card-body">Using HTML, CSS, and vanilla JS to build a social media single-page web app. </p>
@@ -84,9 +85,15 @@
 
     <footer id="contact">
         <h2>Contact Me!</h2>
-        <!-- email -->
-        <!-- linkedin -->
-        <!-- theloop -->
+        <div class="sns">
+            <!-- email -->
+            <a href="#" class="fa fa-envelope" aria-label="Email Address" title="Email Address"></a>
+            <!-- linkedin -->
+            <a href="#" class="fa fa-linkedin" aria-label="LinkedIn Profile" title="LinkedIn Profile"></a>
+
+        </div>
     </footer>
+
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

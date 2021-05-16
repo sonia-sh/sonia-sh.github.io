@@ -12,6 +12,20 @@ nav {
 nav > a {
     text-decoration: none;
     margin: 1em;
+    color: black;
+}
+
+.nav-link {
+    color: black;
+}
+
+.nav-link:active {
+    font-style: italic;
+}
+
+.nav-link:hover {
+    color: rgb(191, 112, 255);
+    font-weight: bold;
 }
 
 h1, h2, h3 {
@@ -26,10 +40,19 @@ main {
 footer {
     height: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(103, 228, 250, 0.555);
     margin-top: 50px;
+}
+
+.fa {
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
 }
 
 #landing-page {
@@ -46,10 +69,12 @@ footer {
 
 #highlight-designer {
     background-color: rgba(210, 155, 255, 0.644);
+    cursor: pointer;
 }
 
 #highlight-developer {
     background-color: rgba(103, 228, 250, 0.555);
+    cursor: pointer;
 }
 
 #portfolio-grid {
@@ -60,6 +85,11 @@ footer {
 
 .row {
     margin-bottom: 60px;
+}
+
+.card {
+    cursor: pointer;
+
 }
 
 .card > img {
