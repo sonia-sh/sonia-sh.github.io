@@ -120,3 +120,7 @@ footer {
     color: rgb(166, 83, 243);
     font-style: italic;
 }
+
+.project > img {
+    width: 80%;
+}

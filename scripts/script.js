@@ -6,3 +6,7 @@ function imgfeed () {
 function orbit () {
   
 }
+
+function back () {
+  window.history.back();
+}
