@@ -17,6 +17,7 @@ nav > a {
 
 .nav-link {
     color: black;
+    font-weight: bold;
 }
 
 .nav-link:active {
@@ -91,6 +92,18 @@ footer {
     cursor: pointer;
 
 }
+.card-link {
+    text-decoration: none;
+    color: black;
+}
+
+.card-link:hover {
+    color: black;
+}
+
+.card:hover {
+    box-shadow: 4px 4px rgba(100, 148, 237, 0.24);
+}
 
 .card > img {
     width: 100%;
@@ -100,5 +113,10 @@ footer {
 }
 
 .card-footer {
+    font-style: italic;
+}
+
+.sub-heading {
+    color: rgb(166, 83, 243);
     font-style: italic;
 }
