@@ -1,51 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
 html {
     font-family: 'Raleway';
-    text-align: center;
+    background-color: #E3E7F1;
 }
 
-nav {
+.display-2 {
+    font-size: 2rem;
+}
+
+/* ==================== NAVIGATION BAR - START ====================*/
+.navbar {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+    position: sticky;
 }
 
-nav > a {
+.navbar-nav .nav-link {
     text-decoration: none;
-    margin: 1em;
-    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: 'Barlow', sans-serif;
+    margin-right: 0.5em;
+    transition: all 0.2s ease-in-out;
 }
+.navbar-nav .nav-link:hover {
+    transform: scale(1.05);
+}   
 
-.nav-link {
-    color: black;
-    font-weight: bold;
-}
-
-.nav-link:active {
-    font-style: italic;
-}
-
-.nav-link:hover {
-    color: rgb(191, 112, 255);
-    font-weight: bold;
-}
-
-h1, h2, h3 {
-    font-family: 'Playfair Display';
-}
+/* ==================== NAVIGATION BAR - END ====================*/
 
 main {
     margin: 0;
     padding: 0;
-}
-
-footer {
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(103, 228, 250, 0.555);
-    margin-top: 50px;
+    background-color: #E3E7F1;
 }
 
 .fa {
@@ -56,26 +46,108 @@ footer {
   border-radius: 50%;
 }
 
-#landing-page {
-    /* border: 5px solid black; */
-    width: 96vw;
-    height: 100vh;
+/* ==================== HOME PAGE BANNER - START ==================== */
+
+.landing-page {
+    /* width: 96vw; */
+    height: 88vh;
     display: flex;
+    text-align: left;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("../assets/design3.svg") no-repeat center center;
-    background-size: contain;
+    color: #1f365c;
+    padding: 2rem;
 }
 
-#highlight-designer {
-    background-color: rgba(210, 155, 255, 0.644);
-    cursor: pointer;
+.landing-page > .container {
+    width: 75%;
 }
 
-#highlight-developer {
-    background-color: rgba(103, 228, 250, 0.555);
-    cursor: pointer;
+.landing-page h1 {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    text-transform: capitalize;
+    font-family: 'Barlow', sans-serif;
+}
+
+.landing-page h2 {
+    font-size: 2rem;
+}
+
+.landing-page .banner-image img {
+    padding: 8rem 0;
+    width: 90rem;
+}
+
+.landing-page .about-button-group {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.landing-page button {
+    border: 1px solid #52688F;
+    color: #52688F;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Barlow', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.landing-page button:hover {
+    transform: scale(1.05);  
+    color: #52688F;
+}   
+
+.landing-page button:active {
+    transform: scale(1.05);  
+}   
+
+#button-about {
+    background-color: #7391C8;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+#landing-page-dot-grid-1 {
+    width: 10vw;
+    position: absolute;
+    top: 7em;
+    right: 0;
+}
+
+#landing-page-dot-grid-2 {
+    width: 105px;
+    height: 270px;
+    position: absolute;
+    float: left;
+    top: 12em;
+}
+
+#landing-page-zigzag {
+    position: absolute;
+    bottom: 3rem;
+    right: 0; 
+}
+
+/* ==================== HOME PAGE BANNER - END ==================== */
+
+
+/* ==================== HOME PAGE PROJECTS - START ==================== */
+hr {
+    margin-top: 2rem;
+}
+
+#projects {
+    padding: 6rem 4rem;
+    color: #1f365c;
+    background-color: #fff;
+}
+
+.projects h1 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+    color: #000;
 }
 
 #portfolio-grid {
@@ -84,13 +156,50 @@ footer {
     margin: auto;
 }
 
+#project-filter-label {
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.filters-button-group {
+    /* border: 1px solid lightgray; */
+    background-color: #fff;
+    border-radius: 0.3rem;
+}
+
+.button-group button {
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+    color:rgba(99, 99, 99, 0.9);
+    text-transform: uppercase;
+    padding-top: 0;
+    padding-left: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+.button-group button:hover {
+    transform: scale(1.05);  
+}   
+
+.button-group button:active {
+    transform: scale(1.05);  
+} 
+
+.button-group .is-checked {
+    color: #1f365c;
+}
+
 .row {
     margin-bottom: 60px;
 }
 
 .card {
     cursor: pointer;
-
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+.card:hover {
+    transform: scale(1.01);  
 }
 .card-link {
     text-decoration: none;
@@ -102,7 +211,8 @@ footer {
 }
 
 .card:hover {
-    box-shadow: 4px 4px rgba(100, 148, 237, 0.24);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    color: black;
 }
 
 .card > img {
@@ -124,3 +234,411 @@ footer {
 .project > img {
     width: 80%;
 }
+
+.back-btn {
+    text-align: left;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.site-main .projects {
+    padding: 4rem 0;
+}
+
+.site-main .projects .button-group button {
+    background: transparent;
+    border: none;
+}
+
+.open-page {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-header {
+    background-color: white;
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+
+.card .img-top {
+    height: 100%;
+    object-fit: contain;
+}
+
+.card-footer {
+    background-color: white;
+    padding-top: 16px;
+    color: rgba(99, 99, 99, 0.6);
+    font-size: 0.7rem;
+}
+
+/* ==================== HOME PAGE PROJECTS - END ==================== */
+
+/* ==================== FOOTER - START ==================== */
+footer {
+    background-color: #E3E7F1;
+    position: absolute;
+    width: 100vw;
+}
+
+.sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 4rem 6rem;
+}
+
+footer h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+}
+
+footer svg {
+    transition: all 0.2s ease-in-out;
+}
+
+footer > div > div > a > svg:hover {
+    transform: scale(1.1);  
+}
+
+#footer-zigzag {
+    width: 4.8em;
+    height: 1.8em;
+    position: absolute;
+    float: left;
+    left: 0;
+    bottom: 1.5rem;
+}
+
+#footer-triangles {
+    width: 21em;
+    height: 17em;
+    position: absolute;
+    float: right;
+    bottom: 0;
+    right: 0; 
+}
+
+#footer-dot-grid {
+    width: 22em;
+    height: 12em;
+    position: absolute;
+    bottom: 0;
+    left: 33vw;
+}
+
+/* ==================== FOOTER - END ==================== */
+
+/* ==================== ABOUT PAGE - START ==================== */
+
+.about-heading {
+    height: 88vh;
+    color: #1f365c;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-heading > div > div > h1 {
+    font-family: 'Barlow', sans-serif;
+    padding: 1rem 0rem;
+}
+
+.about-heading > div > div > p {
+    padding-right: 2rem;
+}
+
+.about-content {
+    font-family: 'Barlow', sans-serif;
+    padding: 6rem 4rem;
+}
+
+.about-subheading {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.about-content {
+    background-color: #fff;
+}
+
+/* ==================== ABOUT PAGE - END ==================== */
+
+/* ==================== PROJECT PAGES - START ==================== */
+
+.project-heading {
+    /* background-color: #E3E7F1; */
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0rem;
+}
+
+.first-heading {
+    margin-top: 1rem;
+}
+
+.project-subtitle {
+    font-style: italic;
+    color: #52688F;
+}
+
+.project-overview-container {
+    text-align: left;
+    width: 100%;
+    /* padding: 1rem 2rem 0rem 2rem; */
+}
+
+.project-overview {
+    padding-right: 0.4rem;
+}
+
+#freeguides-team {
+    max-height: 7rem;
+}
+
+.project-content h2 {
+    margin-top: 2rem;
+}
+
+.project-content h3 {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.project-content h4 {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-content h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.project-content img {
+    text-align: center;
+}
+
+#freeguides-participating {
+    max-height: 24rem;
+}
+
+#freeguides-table {
+    max-height: 24rem;
+}
+
+.second-heading {
+    font-size: 1rem;
+    text-decoration: underline;
+}
+
+.project .display-4 {
+    font-size: 1rem;
+}
+
+.project-type {
+    font-style: italic;
+}
+
+.project {
+    margin-bottom: 8rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Barlow', sans-serif;
+}
+
+.project h1 {
+    margin-bottom: 1rem;
+}
+
+.project hr {
+    margin: 2.4rem 0rem;
+}
+
+.project .btn {
+    background-color: white;
+    border: 1px solid black;
+    transition: all 0.2s ease-in-out;
+}
+
+.project .btn:hover {
+    transform: scale(1.1);  
+}
+
+.up-btn {
+    padding-top: 8rem;
+}
+
+.project-info {
+    text-align: left;
+    font-style: normal;
+}
+
+.project-breadcrumb {
+    margin-top: 10rem;
+    --bs-breadcrumb-divider: '>'
+}
+
+/* .project .list-group {
+    max-width: max-content;
+    text-align: left;
+}
+
+.project .list-group a {
+    text-decoration: none;
+    color: black;
+}
+
+.table-contents {
+    position: sticky;
+    top: 10rem;
+    right: 0;
+    z-index: 0;
+} */
+
+.pantrypal-lofi {
+    object-fit: contain;
+    max-height: 16rem;
+}
+
+.pantrypal-hifi {
+    max-height: 16rem;
+    margin: 1rem;
+    object-fit: contain;
+}
+
+#pantrypal-hifi-home {
+    max-height: 14rem;
+    margin: 1rem;
+    object-fit: contain;
+}
+
+#unitree-survey {
+    object-fit: contain;
+    max-width: 42rem;
+}
+
+#unitree-diagram {
+    object-fit: contain;
+    max-width: 40rem;
+}
+
+#unitree-map {
+    object-fit: contain;
+    max-width: 48rem;
+}
+
+#unitree-vision {
+    object-fit: contain;
+    max-width: 40rem;
+    padding-right: 1.2rem;
+    padding-bottom: 0.6rem;
+    border: #d3d3d3 solid 1px;
+    border-radius: 0.2rem;
+}
+
+.user-persona {
+    cursor: default;
+}
+
+.user-persona:hover {
+    transform: none
+}
+
+#fnp-primary {
+    max-height: 28rem;
+}
+
+/* ==================== PROJECT PAGES - END ==================== */
+
+/* ==================== MEDIA QUERIES ==================== */
+
+/* For screens smaller than 577px */
+@media screen and (max-width: 576px) {
+    #landing-page-dot-grid-1 {
+        visibility: hidden;
+    }
+
+    #landing-page-dot-grid-2 {
+        visibility: hidden;
+    }
+
+    #landing-page-zigzag {
+        visibility: hidden;
+    }
+
+    .project-content h2 {
+        margin-top: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #landing-page-dot-grid-1 {
+        /* width: 75.6px;
+        height: 77.4px; */
+        visibility: hidden;
+    }
+    
+    #landing-page-dot-grid-2 {
+        /* width: 63px;
+        height: 162px; */
+        visibility: hidden;
+    }
+    
+    #landing-page-zigzag {
+        visibility: hidden;
+    }
+}
+
+/* ==================== ABOUT ==================== */
+
+/* .site-main .about-section {
+    padding: 8rem;
+    text-align: left;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.site-main .about-section button {
+    border: 1px solid #52688F;
+    color: #52688F;
+    transition: all 0.2s ease-in-out;
+    font-family: 'Barlow', sans-serif;
+}
+
+.site-main .about-section button:hover {
+    transform: scale(1.05);  
+}   
+
+.site-main .about-section button:active {
+    transform: scale(1.05);  
+}   
+
+#button-about {
+    background-color: #7391C8;
+    color: white;
+    border: none;
+    margin-right: 1rem;
+}
+
+.about-section .about-image {
+    text-align: center;
+}
+
+.about-section .about-image img {
+    border-radius: 4px;
+    width: 24rem;
+    margin-bottom: 2rem;
+} */
+
+/* ==================== ABOUT ==================== */

@@ -4,97 +4,328 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sonia Huang Portfolio</title>
+
+    <title>Sonia Huang</title>
+
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+
+    <!-- CSS links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/all.min.css">
     <link rel="stylesheet" href="styles/stylesheet.css">
 </head>
 <body>
+    <!-- ==================== NAVIGATION BAR ====================-->
     <header>
-        <nav class="nav">
-            <a class="nav-link" href="#portfolio-grid" title="Portfolio Home Page">Portfolio</a>
-            <a class="nav-link" href="./docs/about.html" title="About Page">About Me</a>
-            <a class="nav-link" href="#contact" title="Contact Details">Contact</a>
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a class="navbar-brand" href="#">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-egg-fried" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
+                    </svg> -->
+                    <!-- <img src="" alt="logo"> -->
+                    SH
+                </a>
+
+                <!-- TOGGLE MENU ICON -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- NAVIGATION LINKS -->
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="me-auto"></div>
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-label="Home" href="#">Home</a>
+                        <a class="nav-link" aria-label="About" href="./docs/about.html">About</a>
+                        <a class="nav-link" aria-current="Portfolio" href="#projects">Portfolio</a>
+                        <a class="nav-link" aria-label="Contact" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
         </nav>
     </header>
+    <!-- ==================== NAVIGATION BAR ==================== -->
 
-    <main>
-        <div class="landing-page container" id="landing-page">
-            <h1>Hi, I'm Sonia! I am a <span id="highlight-designer">designer</span> & <span id="highlight-developer">developer</span>.</h1>
-            <p>Check out my portfolio below.</p>
-            <img src="" alt="" />
-        </div>
-    
-        <div class="container" id="portfolio-grid">
-            <h1>Projects</h1><br />
-            <div class="row g-3">
-                <div class="col">
-                    <div class="card" id="project-imgfeed" onclick="imgfeed()">
-                        <h3 class="card-header">IMGFeed</h3>
-                        <img class="img-top" alt="" />
-                        <p class="card-body">Using HTML, CSS, and vanilla JS to build a social media single-page web app. </p>
-                        <p class="card-footer">Web Development</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <a class="card-link" href="docs/project-orbit.html">
-                        <div class="card" id="project-orbit">
-                            <h3 class="card-header">Orbit</h3>
-                            <img class="img-top" src="./assets/orbit_thumbnail.png" alt="" />
-                            <p class="card-body">Designing a subject selection guide mobile app for high school students on Figma.</p>
-                            <p class="card-footer">UI/UX</p>
-                        </div>    
-                    </a>
-                </div>
-                <div class="col">
-                    <div class="card" id="project-pantrypal">
-                        <h3 class="card-header">PantryPal</h3>
-                        <img class="img-top" alt="" />
-                        <p class="card-body">Designing an app for managing kitchen inventory.</p>
-                        <p class="card-footer">UI/UX</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row g-3">
-                <div class="col">
-                    <div class="card" id="project-desktop">
-                        <h3 class="card-header">Desktop Buddies</h3>
-                        <img class="img-top" alt="" />
-                        <p class="card-body">3D modelled workspace related objects that can be used as design assets.</p>
-                        <p class="card-footer">3D Modelling</p>
-                    </div>  
-                </div>
-                <div class="col">
-                    <div class="card" id="project-bloom">
-                        <h3 class="card-header">Bloom</h3>
-                        <img class="img-top" alt="" />
-                        <p class="card-body">Short video made in Nuke Studio for Visual Effects course.</p>
-                        <p class="card-footer">Visual Effects</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card" id="project-imgfeed">
-                        <h3 class="card-header">BigBrain</h3>
-                        <img class="img-top" alt="" />
-                        <p class="card-body">Using HTML, CSS, and ReactJS to build a Kahootz clone.</p>
-                        <p class="card-footer">Web Development</p>
+    <main class="site-main">
+        <!-- ==================== BANNER ==================== -->
+        <svg id="landing-page-dot-grid-1" class="img-fluid" viewBox="0 0 126 129" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="14" cy="115.5" r="13.5" fill="white"/>
+            <circle cx="14" cy="72.5" r="13.5" fill="white"/>
+            <circle cx="14" cy="29.5" r="13.5" fill="white"/>
+            <circle cx="57" cy="115.5" r="13.5" fill="white"/>
+            <circle cx="57" cy="72.5" r="13.5" fill="white"/>
+            <circle cx="57" cy="29.5" r="13.5" fill="white"/>
+            <circle cx="100" cy="29.5" r="13.5" fill="white"/>
+            <circle cx="100" cy="72.5" r="13.5" fill="white"/>
+            <circle cx="100" cy="115.5" r="13.5" fill="white"/>
+            <circle cx="32" cy="99.5" r="13.5" fill="#7391C8"/>
+            <circle cx="32" cy="56.5" r="13.5" fill="#7391C8"/>
+            <circle cx="32" cy="13.5" r="13.5" fill="#7391C8"/>
+            <circle cx="75" cy="99.5" r="13.5" fill="#7391C8"/>
+            <circle cx="75" cy="56.5" r="13.5" fill="#7391C8"/>
+            <circle cx="75" cy="13.5" r="13.5" fill="#7391C8"/>
+            <circle cx="118" cy="13.5" r="13.5" fill="#7391C8"/>
+            <circle cx="118" cy="56.5" r="13.5" fill="#7391C8"/>
+            <circle cx="118" cy="99.5" r="13.5" fill="#7391C8"/>
+        </svg>
+        <svg id="landing-page-dot-grid-2" viewBox="0 0 105 270" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="30" cy="15" r="15" fill="white"/>
+            <circle cx="30" cy="75" r="15" fill="white"/>
+            <circle cx="30" cy="135" r="15" fill="white"/>
+            <circle cx="30" cy="195" r="15" fill="white"/>
+            <circle cx="30" cy="255" r="15" fill="white"/>
+            <circle cx="90" cy="15" r="15" fill="white"/>
+            <circle cx="90" cy="75" r="15" fill="white"/>
+            <circle cx="90" cy="135" r="15" fill="white"/>
+            <circle cx="90" cy="195" r="15" fill="white"/>
+            <circle cx="90" cy="255" r="15" fill="white"/>
+        </svg>
+        <svg id="landing-page-zigzag" width="308" height="99" viewBox="0 0 308 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 57L53 11L89 57L119 11L155 57L185 11L217 57" stroke="white" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M117 88L159 42L195 88L225 42L261 88L291 42L323 88" stroke="#7391C8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div class="landing-page" id="landing-page">
+            <div class="container">
+                <!-- INTRODUCTION -->
+                <div>
+                    <!-- IMAGE -->
+                    <!-- <img src="" alt="image banner" class="img-fluid"> -->
+                    <!-- TEXT -->
+                    <h1 class="display-1">HI, I'M SONIA</h1>
+                    <p class="display-2">I am a designer & developer.</p>
+                    <p class="display-2">I’m all about making stuff in the that’s nice to look at and interact with, especially web design & development, interactive art installations, or graphic design.</p>
+                    <div class="about-button-group">
+                        <a href="./docs/about.html"><button id="button-about" type="button" class="btn button">More About Me</button></a>
+                        <a href="./assets/Sonia_Huang_Resume.pdf" download = "file"> 
+                            <button type="button" class="btn button primary-button shadow-none">Download My Resume</button>
+                        </a>
                     </div>
                 </div>
             </div>
+
+            <!-- DOWN BUTTON -->
+            <!-- <a href="#about" class="pt-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </a> -->
         </div>
+        <!-- ==================== BANNER ==================== -->
+
+        <!-- ==================== ABOUT ==================== -->
+        <!-- <section id="about" class="about-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <div class="about-image">
+                            <img src="assets/mmexport1545045291057.jpg" alt="About Me Image" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 about-title">
+                        <h2 class="display-2">
+                            A Little Bit About Me
+                        </h2>
+                        <div class="paragraph py-4">
+                            <p class="pgh">
+                                I studied Bsc. Computer Science and Bma. Media Arts at the University of New South Wales. I enjoy learning a range of things within the digital realm - from web development and design to interactive art installations, graphic design, and visual effects. Basically, if it gets displayed on a screen then I'd like to design and develop it!
+                            </p>
+                        </div>
+                        <a href="./docs/about.html"><button id="button-about" type="button" class="btn button">Read More</button></a>
+                        <a href="./assets/Sonia_Huang_Resume.pdf" download = "file"> 
+                            <button type="button" class="btn button primary-button shadow-none">Download My Resume</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <!-- ==================== ABOUT ==================== -->
+
+        <!-- ==================== PROJECTS ==================== -->
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="project-title pb-5">
+                    <h1 class="display-2">PROJECT ARCHIVE</h1>
+                </div>
+
+                <div class="button-group filters-button-group">
+                    <!-- <h1 class="display-2">PROJECT ARCHIVE</h1> -->
+                    <!-- <p id="project-filter-label text-muted display-4">Filter By: </p> -->
+                    <p class="text-muted display-4" id="project-filter-label">Filter Projects By</p>
+                    <button type="button" class="btn button primary-button is-checked shadow-none" data-filter="*">All Projects</button>
+                    <button type="button" class="btn button shadow-none" data-filter=".uiux">UI/UX Design</button>
+                    <button type="button" class="btn button shadow-none" data-filter=".gfx">Graphic Design</button>
+                    <button type="button" class="btn button shadow-none" data-filter=".frontend">Frontend Development</button>
+                </div>
+
+                <br>
+
+                <div class="row grid gy-4">
+                    <!-- <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item uiux">
+                        <a class="open-page" href="./docs/project-freeguides.html">
+                            <div class="card" id="project-freeguides">
+                                <h3 class="card-header display-3">FreeGuides</h3>
+                                <img class="img-top" src="./assets/freeguides/01 Cover.png" alt="" />
+                                <p class="card-body">Consulting on FreeGuide's mobile user experience.</p>
+                                <p class="card-footer display-4">UI/UX</p>
+                            </div>
+                        </a>
+                    </div> -->
+                    <!-- <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item frontend">
+                        <a class="open-page" href="./docs/project-takeneat.html">
+                            <div class="card" id="project-takeneat">
+                                <h3 class="card-header display-3">Take & Eat</h3>
+                                <img class="img-top" src="./assets/takeneat/Cover.jpg" alt="" />
+                                <p class="card-body">Developing a wait management system for cafes and restaurants as a responsive web app.</p>
+                                <p class="card-footer display-4">Front End Development</p>
+                            </div>
+                        </a>
+                    </div> -->
+                    <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item uiux">
+                        <a class="open-page" href="./docs/project-unitree.html">
+                            <div class="card" id="project-unitree">
+                                <h3 class="card-header display-3">UniTree</h3>
+                                <img class="img-top" src="./assets/unitree/01 Cover.jpg" alt="" />
+                                <p class="card-body">UNSW Moodle redesign to support online learning.</p>
+                                <p class="card-footer display-4">UI/UX</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item uiux">
+                        <a class="open-page" href="./docs/project-pantrypal.html">
+                            <div class="card" id="project-pantrypal">
+                                <h3 class="card-header display-3">PantryPal</h3>
+                                <img class="img-top" src="assets/pantrypal/01 Introduction.png" alt="" />
+                                <p class="card-body">Designing an app for managing kitchen inventory.</p>
+                                <p class="card-footer display-4">UI/UX</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item gfx">
+                        <a class="open-page" href="./docs/project-fnp.html">
+                            <div class="card" id="project-fnp">
+                                <h3 class="card-header display-3">Finding New Paths</h3>
+                                <img class="img-top" src="assets/fnp/01_Cover.jpg" alt="" />
+                                <p class="card-body">Creating a visual identity and designing promotional assets for an exhibition event.</p>
+                                <p class="card-footer display-4">Graphic Design</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item uiux">
+                        <!-- <a class="open-page" href="./docs/project-orbit.html"> -->
+                        <a class="open-page" href="https://www.behance.net/gallery/124045695/Orbit-Subject-Selection-Hackathon-Case-Study">
+                            <div class="card" id="project-orbit">
+                                <h3 class="card-header display-3">Orbit</h3>
+                                <img class="img-top" src="./assets/orbit/Cover.jpg" alt="" />
+                                <p class="card-body">Designing a subject selection guide mobile app for high school students on Figma.</p>
+                                <p class="card-footer display-4">UI/UX</p>
+                            </div>  
+                        </a>
+                    </div>
+                    <!-- <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item gfx">
+                        <a class="open-page" href="./docs/project-vitality.html">
+                            <div class="card" id="project-vitality">
+                                <h3 class="card-header display-3">Mt. Vitality</h3>
+                                <img class="img-top" src="./assets/vitality/Cover.jpg" alt="" />
+                                <p class="card-body">Packaging design for a wellness brand.</p>
+                                <p class="card-footer display-4">Graphic Design</p>
+                            </div>  
+                        </a>
+                    </div> -->
+                    <div class="grid-item col-lg-4 col-md-6 col-sm-12 element-item uiux">
+                        <!-- <a class="open-page" href="./docs/project-clover.html"> -->
+                        <a class="open-page" href="https://www.behance.net/gallery/124054529/Clover-Mobile-App-Design-Case-Study-Creative-Jam">
+                            <div class="card" id="project-clover">
+                                <h3 class="card-header display-3">Clover App</h3>
+                                <img class="img-top" src="./assets/clover/01 Cover.png" alt="" />
+                                <p class="card-body">Mobile UI design for a smart home management app. Submission for 2021 Adobe x Ring Creative Jam.</p>
+                                <p class="card-footer display-4">UI/UX</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer id="contact">
-        <h2>Contact Me!</h2>
         <div class="sns">
-            <!-- email -->
-            <a href="#" class="fa fa-envelope" aria-label="Email Address" title="Email Address"></a>
-            <!-- linkedin -->
-            <a href="#" class="fa fa-linkedin" aria-label="LinkedIn Profile" title="LinkedIn Profile"></a>
+            <h2 class="display-2">GET IN TOUCH</h2>
+            <!-- <p class="text-secondary">Message me on one of these platforms:</p> -->
+            <div>
+                <!-- linkedin -->
+                <a href="https://www.linkedin.com/in/sonia-huang-sh/" class="fa" aria-label="LinkedIn Profile" title="LinkedIn Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+                    </svg>
+                </a>
+                <!-- behance -->
+                <a href="https://www.behance.net/sonia-huang" class="fa" aria-label="Behance Profile" title="Behance Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-behance" viewBox="0 0 16 16">
+                        <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z"/>
+                    </svg>
+                </a>
+                <!-- email -->
+                <a href="mailto:sonia.huang@outlook.com" class="fa" aria-label="Email Address" title="Email Contact">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                </a>
+            </div>
         </div>
+        <!-- zigzag -->
+        <svg id="footer-zigzag" viewBox="0 0 78 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M-22.0645 25.8681L-2.59358 4.54285L14.0957 25.8681L28.0035 4.54285L44.6928 25.8681L58.6006 4.54285L73.4355 25.8681" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <!-- triangles -->
+        <svg id="footer-triangles" viewBox="0 0 340 274" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M195.902 9.402L190.192 30.7107L174.593 15.1116L195.902 9.402Z" fill="white"/>
+            <path d="M150.871 54.4326L145.162 75.7413L129.563 60.1422L150.871 54.4326Z" fill="white"/>
+            <path d="M105.841 99.4632L100.131 120.772L84.5321 105.173L105.841 99.4632Z" fill="white"/>
+            <path d="M60.8102 144.494L55.1005 165.803L39.5015 150.203L60.8102 144.494Z" fill="white"/>
+            <path d="M240.933 54.4326L235.223 75.7413L219.624 60.1422L240.933 54.4326Z" fill="white"/>
+            <path d="M195.902 99.4632L190.192 120.772L174.593 105.173L195.902 99.4632Z" fill="white"/>
+            <path d="M150.871 144.494L145.162 165.803L129.563 150.203L150.871 144.494Z" fill="white"/>
+            <path d="M105.841 189.524L100.131 210.833L84.5321 195.234L105.841 189.524Z" fill="white"/>
+            <path d="M285.963 99.4632L280.254 120.772L264.655 105.173L285.963 99.4632Z" fill="white"/>
+            <path d="M240.933 144.494L235.223 165.803L219.624 150.203L240.933 144.494Z" fill="white"/>
+            <path d="M195.902 189.524L190.192 210.833L174.593 195.234L195.902 189.524Z" fill="white"/>
+            <path d="M150.871 234.555L145.162 255.864L129.563 240.265L150.871 234.555Z" fill="white"/>
+            <path d="M330.994 144.494L325.284 165.803L309.685 150.203L330.994 144.494Z" fill="white"/>
+            <path d="M285.963 189.524L280.254 210.833L264.655 195.234L285.963 189.524Z" fill="white"/>
+            <path d="M240.933 234.555L235.223 255.864L219.624 240.265L240.933 234.555Z" fill="white"/>
+            <path d="M195.902 279.586L190.192 300.894L174.593 285.295L195.902 279.586Z" fill="white"/>
+            <path d="M257.505 77.1844C276.519 103.477 283.439 131.762 282.171 164.382C281.536 180.718 277.479 198.094 263.623 208.511C249.666 219.004 238.783 225.022 220.486 222.43C197.834 219.22 176.764 211.372 160.198 195C138.255 173.313 105.589 137.497 140.167 109.661C158.771 94.6847 179.513 105.578 188.922 124.177C202.658 151.329 187.256 172.862 168.873 192.017C153.738 207.788 126 222.43 94.5474 217.795C85.7015 216.492 62.9665 210.467 51.5019 218.758C35.2745 230.494 36.2295 245.624 41.2172 264.453C43.1283 271.668 50.6368 279.185 54.9268 285.117C59.3648 291.254 67.6203 292.43 71.6389 297.987" stroke="#7391C8" stroke-width="20" stroke-linecap="round"/>
+        </svg>
+        <!-- dots -->
+        <svg id="footer-dot-grid" viewBox="0 0 380 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M69.5509 10.6841C65.017 22.3031 55.1015 42.0437 63.9604 54.26C71.1218 64.1357 84.5228 71.2926 96.6981 70.8739C118.125 70.137 137.588 65.1587 157.458 74.9727C168.999 80.6733 165.48 101.22 165.468 111.613C165.441 135.272 171.927 155.221 195.407 164.383C202.87 167.296 217.123 168.292 217.123 168.292L236.931 169.381C236.931 169.381 250.794 171.951 257.462 177.392C260.732 180.061 262.548 181.784 264.71 185.409C267.61 190.272 268.083 193.738 268.598 199.377C269.445 208.672 263.626 222.754 263.626 222.754C263.626 222.754 261.878 228.566 262.084 231.49C262.34 235.121 264.829 237.907 265.326 241.264C266.276 247.676 277.101 250.424 282.42 252.499C288.379 254.824 316.87 262.331 314.066 269.517C311.554 275.955 312.559 282.345 310.034 289.422C308.268 294.374 309.729 303.113 310.193 308.16" stroke="#7391C8" stroke-width="20" stroke-linecap="round"/>
+            <circle cx="69.4355" cy="86.4877" r="15" fill="white"/>
+            <circle cx="69.4355" cy="146.488" r="15" fill="white"/>
+            <circle cx="69.4355" cy="206.488" r="15" fill="white"/>
+            <circle cx="129.436" cy="86.4877" r="15" fill="white"/>
+            <circle cx="129.436" cy="146.488" r="15" fill="white"/>
+            <circle cx="129.436" cy="206.488" r="15" fill="white"/>
+            <circle cx="189.436" cy="86.4877" r="15" fill="white"/>
+            <circle cx="189.436" cy="146.488" r="15" fill="white"/>
+            <circle cx="189.436" cy="206.488" r="15" fill="white"/>
+            <circle cx="249.436" cy="86.4877" r="15" fill="white"/>
+            <circle cx="249.436" cy="146.488" r="15" fill="white"/>
+            <circle cx="249.436" cy="206.488" r="15" fill="white"/>
+            <circle cx="309.436" cy="86.4877" r="15" fill="white"/>
+            <circle cx="309.436" cy="146.488" r="15" fill="white"/>
+            <circle cx="309.436" cy="206.488" r="15" fill="white"/>
+        </svg>                
     </footer>
 
+    <!-- JS scripts -->
+    <script src="./scripts/jquery.js"></script>
+    <script src="./scripts/bootstrap.min.js"></script>
+    <script src="./scripts/isotope.pkgd.min.js"></script>
     <script src="./scripts/script.js"></script>
 </body>
 </html>
