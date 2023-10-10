@@ -400,6 +400,10 @@ footer > div > div > a > svg:hover {
     max-height: 7rem;
 }
 
+.project-content {
+    width: 50%;
+}
+
 .project-content h2 {
     margin-top: 2rem;
 }
@@ -477,6 +481,7 @@ footer > div > div > a > svg:hover {
 
 .up-btn {
     padding-top: 8rem;
+    padding-bottom: 2rem;
 }
 
 .project-info {
@@ -577,12 +582,20 @@ footer > div > div > a > svg:hover {
         visibility: hidden;
     }
 
+    .breadcrumb {
+        font-size: 0.8rem;
+    }
+
+    .project-content {
+        width: 90%;
+    }
+
     .project-content h2 {
         margin-top: 1.8rem;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 810px) {
     #landing-page-dot-grid-1 {
         /* width: 75.6px;
         height: 77.4px; */
@@ -597,6 +610,16 @@ footer > div > div > a > svg:hover {
     
     #landing-page-zigzag {
         visibility: hidden;
+    }
+
+    .project-content {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 811px) and (max-width: 1080px) {
+    .project-content {
+        width: 75%;
     }
 }
 
