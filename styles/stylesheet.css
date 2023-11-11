@@ -14,14 +14,16 @@ html {
 
 body {
   /* Both the top and bottom gradient images, respectively. */
-  background-image: url("../assets/bg-top.jpg"), url("../assets/bg-bottom.jpg");
+  /* background-image: url("../assets/bg-top.jpg"), url("../assets/bg-bottom.jpg");
   background-position: left top, right bottom;
   background-repeat: no-repeat, no-repeat;
   background-size: 100% auto, 100% auto;
-  background-attachment: scroll, scroll;
+  background-attachment: scroll, scroll; */
 
   /* The beige background color for in between the top and bottom background images. */
   background-color: #fcf6f2;
+
+  background: radial-gradient(ellipse at 15% 16%, #c8d9f3 0%, #fcf6f2 41.34%), radial-gradient(ellipse at 91% 100%, #c8d9f3 0%, #fcf6f2 42.38%); background-blend-mode: multiply, normal;  background-repeat: repeat-repeat, repeat;
 }
 
 p {
@@ -849,11 +851,11 @@ li {
 @media only screen and (min-width: 1440px) {
   body {
     /* Both the top and bottom gradient images, respectively. */
-    background-image: url("../assets/bg-top-bottom.jpg");
+    /* background-image: url("../assets/bg-top-bottom.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100% auto;
-    background-attachment: scroll;
+    background-attachment: scroll; */
   }
 
   .hero {
