@@ -1,41 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,500;0,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tapestry&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps&display=swap");
 
 html {
-    font-family: 'Raleway';
-    background-color: #E3E7F1;
+  /* Default fonts. */
+  font-family: "Barlow Semi Condensed", "Raleway", sans-serif;
+
+  /* The beige background color for in between the top and bottom background images. */
+  background-color: #fcf6f2;
 }
 
-.display-2 {
-    font-size: 2rem;
+body {
+  /* Both the top and bottom gradient images, respectively. */
+  background-image: url("../assets/bg-top.jpg"), url("../assets/bg-bottom.jpg");
+  background-position: left top, right bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% auto, 100% auto;
+  background-attachment: scroll, scroll;
+
+  /* The beige background color for in between the top and bottom background images. */
+  background-color: #fcf6f2;
+}
+
+p {
+  /* Default paragraph styling. */
+  font-family: "Barlow Semi Condensed", "Raleway", sans-serif;
+}
+
+hr {
+  margin-top: 2rem;
+}
+
+.viaoda-libre-heading {
+  font-family: "Viaoda Libre", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  text-transform: lowercase;
+}
+
+.barlow-semi-heading {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #002b5b;
+  line-height: normal;
+  font-size: 1rem;
+}
+
+.barlow-semi-subtitle {
+  text-align: center;
+  font-family: "Barlow Semi Condensed";
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
 }
 
 /* ==================== NAVIGATION BAR - START ====================*/
 .navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    position: sticky;
+  display: flex;
+  padding: 1rem;
+  position: sticky;
+
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  flex-shrink: 0;
+
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 0;
+}
+
+.navbar-brand img {
+  position: absolute;
+  top: 1.4rem;
+
+  width: 11rem;
+  height: 1.2rem;
+}
+
+.navbar-toggler {
+  padding-bottom: 0.5rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  border-radius: 50%;
 }
 
 .navbar-nav .nav-link {
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-family: 'Barlow', sans-serif;
-    margin-right: 0.5em;
-    transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+
+  color: #002b5b;
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }
 .navbar-nav .nav-link:hover {
-    transform: scale(1.05);
-}   
+  transform: scale(1.1);
+}
 
 /* ==================== NAVIGATION BAR - END ====================*/
 
 main {
-    margin: 0;
-    padding: 0;
-    background-color: #E3E7F1;
+  margin: 0;
+  padding: 0;
 }
 
 .fa {
@@ -46,287 +129,326 @@ main {
   border-radius: 50%;
 }
 
-/* ==================== HOME PAGE BANNER - START ==================== */
+/* Hero section */
+.hero {
+  padding: 1.6rem;
+  height: 88vh;
 
-.landing-page {
-    /* width: 96vw; */
-    height: 88vh;
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #1f365c;
-    padding: 2rem;
+  text-align: center;
+
+  /* Put hero content in the center for small screens. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Vector decoration images. */
+  background-image: url("../assets/star-vector.svg"),
+    url("../assets/drop-vector.svg"), url("../assets/line-01.svg"),
+    url("../assets/line-02.svg");
+  background-repeat: no-repeat;
+  background-position: 3.2rem 2.4rem, right 3.2rem bottom 1.6rem,
+    top 4.8rem right, left bottom 3.2rem;
+  background-size: 3.2rem, 4rem, 11.2rem, 11.2rem;
 }
 
-.landing-page > .container {
-    width: 75%;
+.hero .barlow-semi-subtitle {
+  max-width: 32rem;
 }
 
-.landing-page h1 {
-    font-size: 4rem;
-    padding-bottom: 2rem;
-    text-transform: capitalize;
-    font-family: 'Barlow', sans-serif;
+/* Hero section buttons. */
+.about-button-group {
+  /* Distance between buttons and text paragraph above it. */
+  margin-top: 2.4rem;
 }
 
-.landing-page h2 {
-    font-size: 2rem;
-}
-
-.landing-page .banner-image img {
-    padding: 8rem 0;
-    width: 90rem;
-}
-
-.landing-page .about-button-group {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.landing-page button {
-    border: 1px solid #52688F;
-    color: #52688F;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Barlow', sans-serif;
-    margin-bottom: 1rem;
-}
-
-.landing-page button:hover {
-    transform: scale(1.05);  
-    color: #52688F;
-}   
-
-.landing-page button:active {
-    transform: scale(1.05);  
-}   
-
+/* Hero section 'More About Me' button. */
 #button-about {
-    background-color: #7391C8;
-    color: white;
-    border: none;
-    margin-right: 1rem;
+  /* Button styling. */
+  border-radius: 0.5rem;
+  border: none;
+  background: #002b5b;
+  width: 6.4rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+
+  /* Button text styling. */
+  color: #fff;
+  text-align: center;
+  font-family: "Barlow Semi Condensed";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
-#landing-page-dot-grid-1 {
-    width: 10vw;
-    position: absolute;
-    top: 7em;
-    right: 0;
+/* 'More About Me' button animation when on hover or focus. */
+#button-about:hover,
+#button-about:focus {
+  box-shadow: inset 6.4rem 0 0 0 rgb(255, 255, 255);
+  color: #002b5b;
 }
 
-#landing-page-dot-grid-2 {
-    width: 105px;
-    height: 270px;
-    position: absolute;
-    float: left;
-    top: 12em;
+/* Hero section 'Download resume' button. */
+#button-resume {
+  /* Button styling. */
+  width: 5.6rem;
+  height: 1.6rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  border: 2px solid #002b5b;
+
+  /* Button text styling. */
+  color: #002b5b;
+  text-align: center;
+  font-family: "Barlow Semi Condensed";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.72rem;
+  text-transform: uppercase;
 }
 
-#landing-page-zigzag {
-    position: absolute;
-    bottom: 3rem;
-    right: 0; 
+/* 'Download Resume' button animation when on hover or focus. */
+#button-resume:hover,
+#button-resume:focus {
+  box-shadow: inset 5.6rem 0 0 0 #002b5b;
+  color: #ffffff;
 }
-
-/* ==================== HOME PAGE BANNER - END ==================== */
-
 
 /* ==================== HOME PAGE PROJECTS - START ==================== */
-hr {
-    margin-top: 2rem;
-}
 
 #projects {
-    padding: 6rem 4rem;
-    color: #1f365c;
-    background-color: #fff;
+  padding: 6rem 2rem;
+  color: #1f365c;
+
+  /* Star decoration above projects section. */
+  background-image: url("../assets/star-vector.svg");
+  background-repeat: no-repeat;
+  background-position: center top 6.4rem;
+  background-size: 1.6rem;
 }
 
-.projects h1 {
-    font-family: 'Barlow', sans-serif;
-    font-size: 2rem;
-    color: #000;
+.project-title {
+  margin-top: 8rem;
+
+  font-size: 2rem;
+  text-align: center;
 }
 
 #portfolio-grid {
-    width: 90vw;
-    display: auto;
-    margin: auto;
+  width: 90vw;
+  display: auto;
+  margin: auto;
 }
 
 #project-filter-label {
-    font-style: italic;
-    font-size: 0.9rem;
+  font-style: italic;
 }
 
 .filters-button-group {
-    /* border: 1px solid lightgray; */
-    background-color: #fff;
-    border-radius: 0.3rem;
+  padding: 2.4rem;
 }
 
-.button-group button {
-    border: 1px solid black;
-    transition: all 0.2s ease-in-out;
-    color:rgba(99, 99, 99, 0.9);
-    text-transform: uppercase;
-    padding-top: 0;
-    padding-left: 0;
-    font-family: 'Barlow', sans-serif;
+.filters-button-group button {
+  transition: all 0.2s ease-in-out;
+
+  color: rgba(0, 0, 0, 0.72);
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+
+  padding-top: 0;
+  padding-left: 0;
 }
 
-.button-group button:hover {
-    transform: scale(1.05);  
-}   
-
+.button-group button:hover,
 .button-group button:active {
-    transform: scale(1.05);  
-} 
+  transform: scale(1.05);
+}
 
 .button-group .is-checked {
-    color: #1f365c;
+  color: #1f365c;
 }
 
-.row {
+/* .row {
     margin-bottom: 60px;
-}
+} */
 
 .card {
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  border: 2px solid #000000;
+  border-radius: 24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .card:hover {
-    transform: scale(1.01);  
+  transform: scale(1.01);
 }
+
 .card-link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .card-link:hover {
-    color: black;
+  color: black;
 }
 
 .card:hover {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    color: black;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: black;
 }
 
 .card > img {
-    width: 100%;
-    height: 300px;
-    margin: auto;
-    object-fit: cover;
+  width: 100%;
+  margin: auto;
+  object-fit: cover;
 }
 
-.card-footer {
-    font-style: italic;
+.project-img {
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+}
+
+.project-details {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+.project-details h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #1f365c;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.project-details p {
+  color: #000;
+  font-family: "Barlow Semi Condensed" sans-serif;
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.project-tag {
+  background-color: #002b5b;
+  border-radius: 0.72rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.48rem 0.64rem;
+  position: absolute;
+  bottom: -1rem;
+}
+
+.project-tag p {
+  color: white;
+  font-size: 0.72rem;
+  font-family: "Barlow Semi Condensed";
+  font-style: italic;
+  font-weight: 400;
+  word-wrap: break-word;
+
+  margin: 0;
 }
 
 .sub-heading {
-    color: rgb(166, 83, 243);
-    font-style: italic;
+  color: rgb(166, 83, 243);
+  font-style: italic;
 }
 
 .project > img {
-    width: 80%;
+  width: 80%;
 }
 
 .back-btn {
-    text-align: left;
-    margin-top: 0;
-    margin-left: 0;
+  text-align: left;
+  margin-top: 0;
+  margin-left: 0;
 }
 
 .site-main .projects {
-    padding: 4rem 0;
+  padding: 4rem 0;
 }
 
 .site-main .projects .button-group button {
-    background: transparent;
-    border: none;
+  background: transparent;
+  border: none;
 }
 
 .open-page {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-.card-header {
+/* .card-header {
     background-color: white;
     font-size: 1.2rem;
     padding: 1rem;
-}
+} */
 
 .card .img-top {
-    height: 100%;
-    object-fit: contain;
+  height: 100%;
+  object-fit: contain;
 }
 
-.card-footer {
+/* .card-footer {
     background-color: white;
     padding-top: 16px;
     color: rgba(99, 99, 99, 0.6);
     font-size: 0.7rem;
-}
+} */
 
 /* ==================== HOME PAGE PROJECTS - END ==================== */
 
 /* ==================== FOOTER - START ==================== */
 footer {
-    background-color: #E3E7F1;
-    position: absolute;
-    width: 100vw;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  color: #002b5b;
+  background-color: transparent;
+}
+
+.footer-title {
+  font-size: 2rem;
+  text-align: center;
 }
 
 .sns {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: left;
-    padding: 4rem 6rem;
-}
-
-footer h2 {
-    font-family: 'Barlow', sans-serif;
-    font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.2rem 6rem;
 }
 
 footer svg {
-    transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 footer > div > div > a > svg:hover {
-    transform: scale(1.1);  
-}
-
-#footer-zigzag {
-    width: 4.8em;
-    height: 1.8em;
-    position: absolute;
-    float: left;
-    left: 0;
-    bottom: 1.5rem;
-}
-
-#footer-triangles {
-    width: 21em;
-    height: 17em;
-    position: absolute;
-    float: right;
-    bottom: 0;
-    right: 0; 
-}
-
-#footer-dot-grid {
-    width: 22em;
-    height: 12em;
-    position: absolute;
-    bottom: 0;
-    left: 33vw;
+  transform: scale(1.1);
 }
 
 /* ==================== FOOTER - END ==================== */
@@ -334,36 +456,40 @@ footer > div > div > a > svg:hover {
 /* ==================== ABOUT PAGE - START ==================== */
 
 .about-heading {
-    height: 88vh;
-    color: #1f365c;
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
+  height: 40%;
 
-.about-heading > div > div > h1 {
-    font-family: 'Barlow', sans-serif;
-    padding: 1rem 0rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #fcf6f2;
 }
 
 .about-heading > div > div > p {
-    padding-right: 2rem;
+  color: #000000;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+#about-img {
+  max-width: 240px;
+  margin: 1rem;
 }
 
 .about-content {
-    font-family: 'Barlow', sans-serif;
-    padding: 6rem 4rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #000000;
+  padding: 6rem 4rem;
+
+  background-color: #fcf6f2;
 }
 
 .about-subheading {
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.about-content {
-    background-color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 /* ==================== ABOUT PAGE - END ==================== */
@@ -371,127 +497,197 @@ footer > div > div > a > svg:hover {
 /* ==================== PROJECT PAGES - START ==================== */
 
 .project-heading {
-    /* background-color: #E3E7F1; */
-    width: 100%;
-    text-align: center;
-    padding: 2rem 0rem;
+  /* background-color: #E3E7F1; */
+  width: 50%;
+  text-align: center;
+  padding: 2rem 0rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-heading .project-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.48rem 0.64rem;
+  margin: 1.6rem;
+  bottom: 0;
+  max-width: fit-content;
+  position: static;
 }
 
 .first-heading {
-    margin-top: 1rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .project-subtitle {
-    font-style: italic;
-    color: #52688F;
+  font-style: italic;
+  color: #52688f;
 }
 
 .project-overview-container {
-    text-align: left;
-    width: 100%;
-    /* padding: 1rem 2rem 0rem 2rem; */
+  text-align: left;
+  width: 100%;
+  /* padding: 1rem 2rem 0rem 2rem; */
 }
 
 .project-overview {
-    padding-right: 0.4rem;
+  padding-right: 0.4rem;
 }
 
 #freeguides-team {
-    max-height: 7rem;
+  max-height: 7rem;
 }
 
 .project-content {
-    width: 50%;
+  width: 50%;
+}
+
+.project-content p,
+li {
+  color: #3f3f3f;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 .project-content h2 {
-    margin-top: 2rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+
+  color: black;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  font-size: 1.6rem;
 }
 
 .project-content h3 {
-    margin-top: 2rem;
-    font-size: 1.6rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1.2rem;
+
+  font-size: 1.4rem;
+  color: black;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: capitalize;
+  word-wrap: break-word;
 }
 
 .project-content h4 {
-    font-size: 1.25rem;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+  color: black;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: capitalize;
+  word-wrap: break-word;
+  font-size: 1.2rem;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .project-content h5 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 0.8rem;
-    margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: black;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-transform: capitalize;
+  word-wrap: break-word;
+
+  margin-top: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .project-content img {
-    text-align: center;
+  text-align: center;
+}
+
+.pexels-img {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 #freeguides-participating {
-    max-height: 24rem;
+  max-height: 24rem;
 }
 
 #freeguides-table {
-    max-height: 24rem;
+  max-height: 24rem;
 }
 
 .second-heading {
-    font-size: 1rem;
-    text-decoration: underline;
+  font-size: 1rem;
+  text-decoration: underline;
 }
 
 .project .display-4 {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .project-type {
-    font-style: italic;
+  font-style: italic;
 }
 
 .project {
-    margin-bottom: 8rem;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    font-family: 'Barlow', sans-serif;
+  margin-bottom: 8rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Barlow", sans-serif;
 }
 
 .project h1 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .project hr {
-    margin: 2.4rem 0rem;
+  margin: 2.4rem 0rem;
 }
 
 .project .btn {
-    background-color: white;
-    border: 1px solid black;
-    transition: all 0.2s ease-in-out;
+  background-color: white;
+  border: 1px solid black;
+  transition: all 0.2s ease-in-out;
 }
 
 .project .btn:hover {
-    transform: scale(1.1);  
+  transform: scale(1.1);
 }
 
 .up-btn {
-    padding-top: 8rem;
-    padding-bottom: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 2rem;
 }
 
 .project-info {
-    text-align: left;
-    font-style: normal;
+  text-align: left;
+  font-style: normal;
 }
 
 .project-breadcrumb {
-    margin-top: 10rem;
-    --bs-breadcrumb-divider: '>'
+  margin-top: 10rem;
+  --bs-breadcrumb-divider: ">";
+}
+
+.breadcrumb-item a:link {
+  color: #000;
+}
+
+.img-margin {
+  margin-top: 2.4rem;
+}
+
+.img-caption-margin {
+  margin-bottom: 2.4rem;
 }
 
 /* .project .list-group {
@@ -512,56 +708,56 @@ footer > div > div > a > svg:hover {
 } */
 
 .pantrypal-lofi {
-    object-fit: contain;
-    max-height: 16rem;
+  object-fit: contain;
+  max-height: 16rem;
 }
 
 .pantrypal-hifi {
-    max-height: 16rem;
-    margin: 1rem;
-    object-fit: contain;
+  max-height: 16rem;
+  margin: 1rem;
+  object-fit: contain;
 }
 
 #pantrypal-hifi-home {
-    max-height: 14rem;
-    margin: 1rem;
-    object-fit: contain;
+  max-height: 14rem;
+  margin: 1rem;
+  object-fit: contain;
 }
 
 #unitree-survey {
-    object-fit: contain;
-    max-width: 42rem;
+  object-fit: contain;
+  max-width: 42rem;
 }
 
 #unitree-diagram {
-    object-fit: contain;
-    max-width: 40rem;
+  object-fit: contain;
+  max-width: 40rem;
 }
 
 #unitree-map {
-    object-fit: contain;
-    max-width: 48rem;
+  object-fit: contain;
+  max-width: 48rem;
 }
 
 #unitree-vision {
-    object-fit: contain;
-    max-width: 40rem;
-    padding-right: 1.2rem;
-    padding-bottom: 0.6rem;
-    border: #d3d3d3 solid 1px;
-    border-radius: 0.2rem;
+  object-fit: contain;
+  max-width: 40rem;
+  padding-right: 1.2rem;
+  padding-bottom: 0.6rem;
+  border: #d3d3d3 solid 1px;
+  border-radius: 0.2rem;
 }
 
 .user-persona {
-    cursor: default;
+  cursor: default;
 }
 
 .user-persona:hover {
-    transform: none
+  transform: none;
 }
 
 #fnp-primary {
-    max-height: 28rem;
+  max-height: 28rem;
 }
 
 /* ==================== PROJECT PAGES - END ==================== */
@@ -570,98 +766,125 @@ footer > div > div > a > svg:hover {
 
 /* For screens smaller than 577px */
 @media screen and (max-width: 576px) {
-    #landing-page-dot-grid-1 {
-        visibility: hidden;
-    }
+  .breadcrumb {
+    font-size: 0.8rem;
+  }
 
-    #landing-page-dot-grid-2 {
-        visibility: hidden;
-    }
+  .project-heading {
+    width: 80%;
+  }
 
-    #landing-page-zigzag {
-        visibility: hidden;
-    }
+  .project-content {
+    width: 90%;
+  }
 
-    .breadcrumb {
-        font-size: 0.8rem;
-    }
-
-    .project-content {
-        width: 90%;
-    }
-
-    .project-content h2 {
-        margin-top: 1.8rem;
-    }
+  .project-content h2 {
+    margin-top: 1.8rem;
+  }
 }
 
 @media screen and (max-width: 810px) {
-    #landing-page-dot-grid-1 {
-        /* width: 75.6px;
-        height: 77.4px; */
-        visibility: hidden;
-    }
-    
-    #landing-page-dot-grid-2 {
-        /* width: 63px;
-        height: 162px; */
-        visibility: hidden;
-    }
-    
-    #landing-page-zigzag {
-        visibility: hidden;
-    }
+  .project-heading {
+    width: 80%;
+  }
 
-    .project-content {
-        width: 80%;
-    }
+  .project-content {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 811px) and (max-width: 1080px) {
-    .project-content {
-        width: 75%;
-    }
+  .project-heading {
+    width: 75%;
+  }
+
+  .project-content {
+    width: 75%;
+  }
 }
 
-/* ==================== ABOUT ==================== */
+@media only screen and (min-width: 640px) {
+  .hero {
+    /* Vector decoration images. */
+    background-image: url("../assets/star-vector.svg"),
+      url("../assets/drop-vector.svg"), url("../assets/line-01.svg"),
+      url("../assets/line-02.svg");
+    background-repeat: no-repeat;
+    background-position: 3.2rem 2.4rem, right 3.2rem bottom 1.6rem,
+      top 4.8rem right, left bottom 3.2rem;
+    background-size: 3.2rem, 4rem, 11.2rem, 11.2rem;
+  }
 
-/* .site-main .about-section {
-    padding: 8rem;
-    text-align: left;
-    height: 100vh;
-    background-color: #fff;
+  .about-heading > div > div > p {
+    color: #000000;
+    padding-right: 5.6rem;
+    padding-left: 5.6rem;
+  }
 }
 
-.site-main .about-section button {
-    border: 1px solid #52688F;
-    color: #52688F;
-    transition: all 0.2s ease-in-out;
-    font-family: 'Barlow', sans-serif;
+@media only screen and (min-width: 720px) {
+  .hero {
+    /* Vector decoration images. */
+    background-image: url("../assets/star-vector.svg"),
+      url("../assets/drop-vector.svg"), url("../assets/line-01.svg"),
+      url("../assets/line-02.svg");
+    background-repeat: no-repeat;
+    background-position: left 16rem top 8rem, right 12rem bottom 8rem,
+      right top 44%, left top 44%;
+    background-size: 3.2rem, 4rem, 11.2rem, 11.2rem;
+  }
+
+  #projects {
+    /* Star decoration above projects section. */
+    background-image: url("../assets/star-vector.svg");
+    background-repeat: no-repeat;
+    background-position: center top 6.4rem;
+    background-size: 2rem;
+  }
 }
 
-.site-main .about-section button:hover {
-    transform: scale(1.05);  
-}   
-
-.site-main .about-section button:active {
-    transform: scale(1.05);  
-}   
-
-#button-about {
-    background-color: #7391C8;
-    color: white;
-    border: none;
-    margin-right: 1rem;
-}
-
-.about-section .about-image {
-    text-align: center;
-}
-
-.about-section .about-image img {
-    border-radius: 4px;
-    width: 24rem;
-    margin-bottom: 2rem;
+/* @media only screen and (min-width: 960px) {
 } */
 
-/* ==================== ABOUT ==================== */
+@media only screen and (min-width: 1440px) {
+  body {
+    /* Both the top and bottom gradient images, respectively. */
+    background-image: url("../assets/bg-top-bottom.jpg");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-attachment: scroll;
+  }
+
+  .hero {
+    /* Vector decoration images. */
+    background-image: url("../assets/star-vector.svg"),
+      url("../assets/drop-vector.svg"), url("../assets/hero-assets-lg.svg");
+    background-repeat: no-repeat;
+    background-position: 3.2rem 32rem, right 48rem top 8rem, top 4rem right;
+    background-size: 3.2rem, 1.6rem, 32rem;
+  }
+
+  .hero-content {
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 10rem;
+    align-self: flex-start;
+  }
+
+  .hero-content .barlow-semi-subtitle {
+    text-align: left;
+  }
+
+  footer {
+    background-image: url("../assets/star-vector.svg");
+    background-repeat: no-repeat;
+    background-position: right 2rem bottom 2rem;
+    background-size: 4.8rem;
+  }
+}

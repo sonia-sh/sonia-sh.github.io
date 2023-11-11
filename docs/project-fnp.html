@@ -16,28 +16,13 @@
   </head>
 
   <body>
-    <!-- ==================== NAVIGATION BAR ====================-->
+    <!-- ==================== NAVIGATION BAR - START ====================-->
     <header>
-      <nav
-        class="navbar navbar-expand-lg navbar-light fixed-top bg-light nav-page"
-      >
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container-fluid">
           <!-- LOGO -->
           <a class="navbar-brand" href="../index.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              class="bi bi-egg-fried"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-              <path
-                d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"
-              />
-            </svg>
-            <!-- <img src="" alt="logo"> -->
+            <img src="../assets/nav-logo.svg" alt="Sonia Huang" />
           </a>
 
           <!-- TOGGLE MENU ICON -->
@@ -50,7 +35,20 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
           </button>
 
           <!-- NAVIGATION LINKS -->
@@ -60,7 +58,7 @@
               <a class="nav-link" aria-label="Home" href="../index.html"
                 >Home</a
               >
-              <a class="nav-link" aria-label="About" href="../index.html#about"
+              <a class="nav-link" aria-label="About" href="./about.html"
                 >About</a
               >
               <a
@@ -77,11 +75,11 @@
         </div>
       </nav>
     </header>
-    <!-- ==================== NAVIGATION BAR ==================== -->
+    <!-- ==================== NAVIGATION BAR - END ====================-->
 
     <main class="project">
       <!-- Breadcrumbs -->
-      <nav
+      <!-- <nav
         class="container my-4"
         style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
         aria-label="breadcrumb"
@@ -95,23 +93,27 @@
             Finding New Paths Brand Identity
           </li>
         </ol>
-      </nav>
-
-      <!-- Case Study Cover Image -->
-      <img
-        id="intro"
-        src="../assets/fnp/01_Cover.jpg"
-        class="img-fluid"
-        alt="..."
-      />
+      </nav> -->
 
       <!-- Project Heading -->
       <div class="project-heading container">
-        <h1 class="first-heading display-2">
+        <!-- Case Study Cover Image -->
+        <img
+          id="intro"
+          src="../assets/fnp/01_Cover.jpg"
+          class="img-fluid"
+          alt="..."
+        />
+
+        <div class="project-tag">
+          <p>Graphic Design</p>
+        </div>
+
+        <h1 class="first-heading">
           Finding New Paths Exhibition Visual Identity
         </h1>
-        <p class="project-subtitle">Graphic Design</p>
-        <button type="button" class="btn btn-sm">
+
+        <!-- <button type="button" class="btn btn-sm">
           <a
             class="text-decoration-none text-secondary"
             href=""
@@ -134,12 +136,12 @@
             </svg>
             Open as PDF
           </a>
-        </button>
+        </button> -->
       </div>
 
       <div class="project-content container">
         <!-- Background -->
-        <h1>Background</h1>
+        <h2>Background</h2>
         <p>
           This project was an assessment task for my Graphics 2 course at UNSW
           which I took in early 2022. Our brief was to create a design guide for
@@ -155,7 +157,7 @@
 
         <div>
           <!-- Concept Statement -->
-          <h1>Concept Statement</h1>
+          <h2>Concept Statement</h2>
           <p>
             Design has evolved over the years and will continue to evolve for as
             long as people will be making new things. People are always looking
@@ -170,18 +172,19 @@
             something new.
           </p>
           <p>
-            My concept ‘<b>Design is Finding New Paths</b>’ aims to represent this passage of ideas and
-            creativity as design continues to be explored by designers all over
-            the world. It is visually represented by the visual motif of circuit
-            traces (paths). These are often painted onto circuit boards as a way
-            for electricity to move from once place to another. In this visual
-            identity, the creative spark, the idea, is the electricity that is
-            moving forward. It travels from one design to another, from one
-            iteration to the next, from designer to designer. The logo is uses
-            lines and circles to mimic circuit paths forming the letters ‘F’,
-            ‘N’, and ‘P’. In some visual assets, additional circuit paths
-            extrude from the logo and the text, implying that the exhibition it
-            represents can also inspire more design work in the future.
+            My concept ‘<b>Design is Finding New Paths</b>’ aims to represent
+            this passage of ideas and creativity as design continues to be
+            explored by designers all over the world. It is visually represented
+            by the visual motif of circuit traces (paths). These are often
+            painted onto circuit boards as a way for electricity to move from
+            once place to another. In this visual identity, the creative spark,
+            the idea, is the electricity that is moving forward. It travels from
+            one design to another, from one iteration to the next, from designer
+            to designer. The logo is uses lines and circles to mimic circuit
+            paths forming the letters ‘F’, ‘N’, and ‘P’. In some visual assets,
+            additional circuit paths extrude from the logo and the text,
+            implying that the exhibition it represents can also inspire more
+            design work in the future.
           </p>
           <p>
             A dark purple is used to accompany the technological and futuristic
@@ -197,7 +200,7 @@
 
         <!-- Primary Identity -->
         <div>
-          <h1>Primary Identity</h1>
+          <h2>Primary Identity</h2>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -232,7 +235,7 @@
 
         <!-- Secondary Identities -->
         <div>
-          <h1>Secondary Identities</h1>
+          <h2>Secondary Identities</h2>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -293,7 +296,7 @@
 
         <!-- Colour Palette -->
         <div>
-          <h1>Colour Palette</h1>
+          <h2>Colour Palette</h2>
           <div class="row">
             <div class="col-md-6">
               <p>
@@ -329,7 +332,7 @@
         <hr />
 
         <!-- Typography -->
-        <h1>Typography</h1>
+        <h2>Typography</h2>
         <div class="row justify-content-center">
           <img
             src="../assets/fnp/typo.jpg"
@@ -341,7 +344,7 @@
         <hr />
 
         <!-- Social Media Promotional Post -->
-        <h1>Social Media Promotional Post</h1>
+        <h2>Social Media Promotional Post</h2>
         <div class="row">
           <div class="col-md-6">
             <p>
@@ -350,11 +353,13 @@
               exhibition itself.
             </p>
             <p>
-              It primarily features the exhibition logo and title. The purple was used for the background, a stronger use of colour should help it stand out on someone’s feed
+              It primarily features the exhibition logo and title. The purple
+              was used for the background, a stronger use of colour should help
+              it stand out on someone’s feed
             </p>
             <p>
-              The post description should repeat the exhibition
-              details for the viewer to read.
+              The post description should repeat the exhibition details for the
+              viewer to read.
             </p>
           </div>
           <div class="col-md-6">
@@ -372,7 +377,7 @@
         <hr />
 
         <!-- Entry Wall -->
-        <h1>Entry Wall</h1>
+        <h2>Entry Wall</h2>
         <div>
           <p>
             The assignment also required a design for an entry wall to the
@@ -388,74 +393,92 @@
           <p>
             On the left is AGDA’s official description and logo. It explains
             what the organisation and exhibition is about. The lines on image
-            are intended to direct the visitor from the logo to the exhibition entry on the left.
+            are intended to direct the visitor from the logo to the exhibition
+            entry on the left.
           </p>
         </div>
         <div class="row">
           <div class="col-md-6">
-            <img src="../assets/fnp/wall2.jpg" alt="" class="img-fluid" />
-            <p class="project-subtitle">Full wall design.</p>
+            <img
+              src="../assets/fnp/wall2.jpg"
+              alt=""
+              class="img-fluid img-margin"
+            />
+            <p class="project-subtitle img-caption-margin">Full wall design.</p>
           </div>
           <div class="col-md-6">
-            <img src="../assets/fnp/wall1.jpg" alt="" class="img-fluid" />
-            <p class="project-subtitle">Wall design with a person for scale.</p>
+            <img
+              src="../assets/fnp/wall1.jpg"
+              alt=""
+              class="img-fluid img-margin"
+            />
+            <p class="project-subtitle img-caption-margin">
+              Wall design with a person for scale.
+            </p>
           </div>
         </div>
 
         <hr />
 
         <!-- Exhibition Guide -->
-        <h1>Exhibition Guide</h1>
-        <div class="row">
-          <div class="col-md-4">
-            <p>
-              Visitors can pick up an exhibition guide at the entry. It serves
-              as both an introduction and explanation to the exhibition and its
-              featured artists, but also as a souvenir.
-            </p>
-            <p>
-              It is A5 sized and made with recycled paper. The date is included
-              on the top left corner.
-            </p>
-            <p>
-              Like the other assets, the logo is in white and used on top of a
-              dark purple background. Circuit paths extrude from the logo and
-              title text and to the edge of the cover, hopefully leading the
-              viewer to turn the page and open the guide.
-            </p>
-          </div>
-
-          <div class="col-md-4">
-            <img src="../assets/fnp/bookcover-1.jpg" alt="" class="img-fluid" />
-            <p class="project-subtitle">Cover design.</p>
-          </div>
-          <div class="col-md-4">
-            <img src="../assets/fnp/bookcover-2.jpg" alt="" class="img-fluid" />
-            <p class="project-subtitle">Booklet mockup.</p>
-          </div>
+        <h2>Exhibition Guide</h2>
+        <div>
+          <p>
+            Visitors can pick up an exhibition guide at the entry. It serves as
+            both an introduction and explanation to the exhibition and its
+            featured artists, but also as a souvenir.
+          </p>
+          <p>
+            It is A5 sized and made with recycled paper. The date is included on
+            the top left corner.
+          </p>
+          <p>
+            Like the other assets, the logo is in white and used on top of a
+            dark purple background. Circuit paths extrude from the logo and
+            title text and to the edge of the cover, hopefully leading the
+            viewer to turn the page and open the guide.
+          </p>
         </div>
         <div class="row">
-          <div class="col-md-4">
-            <p>
-              The guide introduces featured creators. Creators from the AGDA
-              Hall of Fame receive a double page spread.
-            </p>
-            <p>
-              Garry Emery was selected as a featured designer. His work as an
-              individual and as part of his studio ‘emerystudio’ have expanded
-              from exploring letterforms to designing for a diverse range of
-              mediums, incorporating different multidisciplinary practices.
-            </p>
-            <p>
-              This demonstrates the growing opportunities for design to be
-              considered, the many different paths that design can find itself
-              moving in.
-            </p>
+          <div class="col-md">
+            <img
+              src="../assets/fnp/bookcover-1.jpg"
+              alt=""
+              class="img-fluid img-margin"
+            />
+            <p class="project-subtitle img-caption-margin">Cover design.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md">
+            <img
+              src="../assets/fnp/bookcover-2.jpg"
+              alt=""
+              class="img-fluid img-margin"
+            />
+            <p class="project-subtitle img-caption-margin">Booklet mockup.</p>
+          </div>
+        </div>
+        <div>
+          <p>
+            The guide introduces featured creators. Creators from the AGDA Hall
+            of Fame receive a double page spread.
+          </p>
+          <p>
+            Garry Emery was selected as a featured designer. His work as an
+            individual and as part of his studio ‘emerystudio’ have expanded
+            from exploring letterforms to designing for a diverse range of
+            mediums, incorporating different multidisciplinary practices.
+          </p>
+          <p>
+            This demonstrates the growing opportunities for design to be
+            considered, the many different paths that design can find itself
+            moving in.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md">
             <img src="../assets/fnp/guide.jpg" alt="" class="img-fluid" />
           </div>
-          <div class="col-md-4">
+          <div class="col-md">
             <img src="../assets/fnp/guide2.jpg" alt="" class="img-fluid" />
           </div>
         </div>
@@ -463,7 +486,7 @@
         <hr />
 
         <!-- Event Badges -->
-        <h1>Exhibition Badges</h1>
+        <h2>Exhibition Badges</h2>
         <div class="row">
           <div class="col-md-6">
             <p>
@@ -506,50 +529,77 @@
       </div>
     </main>
 
+    <!-- ==================== FOOTER ====================-->
     <footer id="contact">
-      <h2 class="display-2">Contact Me</h2>
-      <div class="sns p-4">
-        <p class="text-secondary">Message me on one of these platforms:</p>
-        <!-- linkedin -->
-        <a
-          href="https://www.linkedin.com/in/sonia-huang-sh/"
-          class="fa"
-          aria-label="LinkedIn Profile"
-          title="LinkedIn Profile"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            class="bi bi-linkedin"
-            viewBox="0 0 16 16"
+      <div class="sns">
+        <h2 class="viaoda-libre-heading footer-title">GET IN TOUCH</h2>
+        <div>
+          <!-- linkedin -->
+          <a
+            href="https://www.linkedin.com/in/sonia-huang-sh/"
+            class="fa"
+            aria-label="LinkedIn Profile"
+            title="LinkedIn Profile"
           >
-            <path
-              d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
-            />
-          </svg>
-        </a>
-        <!-- behance -->
-        <a
-          href="https://www.behance.net/sonia-huang"
-          class="fa"
-          aria-label="Behance Profile"
-          title="Behance Profile"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            class="bi bi-behance"
-            viewBox="0 0 16 16"
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              class="bi bi-linkedin"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+                fill="#002B5B"
+              />
+            </svg>
+          </a>
+
+          <!-- behance -->
+          <a
+            href="https://www.behance.net/sonia-huang"
+            class="fa"
+            aria-label="Behance Profile"
+            title="Behance Profile"
           >
-            <path
-              d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z"
-            />
-          </svg>
-        </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              class="bi bi-behance"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391.286.176.497.426.641.747.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922.281.426.461.957.461 1.563 0 .496-.105.922-.285 1.278a2.317 2.317 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.329 5.329 0 0 1-1.278.176L0 12.803V3h4.654zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a.981.981 0 0 0-.32-.355 1.84 1.84 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305v.005zm6.858-.035c.286.285.711.426 1.278.426.39 0 .746-.106 1.032-.286.285-.215.46-.426.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.135 4.135 0 0 1-1.527-.285 2.827 2.827 0 0 1-1.137-.782 2.851 2.851 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4.018 4.018 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396zm2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176-.215.105-.356.25-.496.39a.957.957 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978v-.957z"
+                fill="#002B5B"
+              />
+            </svg>
+          </a>
+
+          <!-- email -->
+          <a
+            href="mailto:sonia.huang@outlook.com"
+            class="fa"
+            aria-label="Email Address"
+            title="Email Contact"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              class="bi bi-envelope-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"
+                fill="#002B5B"
+              />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
+    <!-- ==================== FOOTER ====================-->
 
     <!-- JS scripts -->
     <script src="../scripts/jquery.js"></script>
