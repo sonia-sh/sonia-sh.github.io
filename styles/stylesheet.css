@@ -121,6 +121,8 @@ hr {
 main {
   margin: 0;
   padding: 0;
+
+  overflow: hidden;
 }
 
 .fa {
@@ -427,6 +429,7 @@ footer {
   width: 100vw;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   color: #002b5b;
   background-color: transparent;
@@ -638,7 +641,6 @@ li {
 }
 
 .project {
-  margin-bottom: 8rem;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -849,15 +851,6 @@ li {
 } */
 
 @media only screen and (min-width: 1440px) {
-  body {
-    /* Both the top and bottom gradient images, respectively. */
-    /* background-image: url("../assets/bg-top-bottom.jpg");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-attachment: scroll; */
-  }
-
   .hero {
     /* Vector decoration images. */
     background-image: url("../assets/star-vector.svg"),
